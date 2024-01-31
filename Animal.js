@@ -24,9 +24,7 @@ class Animal {
   }
 
   move(direction) {
-    if (this.constructor === Animal) {
-      throw new Error("Cannot instantiate abstract class");
-    }
+    throw new Error("Polymorphise abstract class method");
   }
 }
 
@@ -55,7 +53,7 @@ class Arthropoda extends Animal {
     return this.#thermoReg;
   }
   move(direction) {
-    let kind = ['walking', 'crawling', 'hopping', 'flying'];
+    let kind = ["walking", "crawling", "hopping", "flying"];
     console.log(
       `${this.name} is ${
         kind[Math.floor(Math.random() * kind.length)]
@@ -123,7 +121,7 @@ class Amphibia extends Animal {
     return this.#thermoReg;
   }
   move(direction) {
-    let kind = ['swim'];
+    let kind = ["swim"];
     console.log(
       `${this.name} is ${
         kind[Math.floor(Math.random() * kind.length)]
@@ -157,7 +155,7 @@ class Reptiles extends Animal {
     return this.#thermoReg;
   }
   move(direction) {
-    let kind = ['crawling', 'slithering', 'swiming'];
+    let kind = ["crawling", "slithering", "swiming"];
     console.log(
       `${this.name} is ${
         kind[Math.floor(Math.random() * kind.length)]
@@ -191,7 +189,7 @@ class Aves extends Animal {
     return this.#thermoReg;
   }
   move(direction) {
-    let kind = ['flying', 'hopping', 'walking', 'swimming'];
+    let kind = ["flying", "hopping", "walking", "swimming"];
     console.log(
       `${this.name} is ${
         kind[Math.floor(Math.random() * kind.length)]
@@ -225,7 +223,7 @@ class Mammals extends Animal {
     return this.#thermoReg;
   }
   move(direction) {
-    let kind = ['walking', 'running', 'hopping', 'swimming'];
+    let kind = ["walking", "running", "hopping", "swimming"];
     console.log(
       `${this.name} is ${
         kind[Math.floor(Math.random() * kind.length)]
