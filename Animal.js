@@ -22,6 +22,12 @@ class Animal {
       this[property] = newValue;
     }
   }
+
+  move(direction) {
+    if (this.constructor === Animal) {
+      throw new Error("Cannot instantiate abstract class");
+    }
+  }
 }
 
 class Arthropoda extends Animal {
@@ -47,6 +53,14 @@ class Arthropoda extends Animal {
   }
   thermoRegulation() {
     return this.#thermoReg;
+  }
+  move(direction) {
+    let kind = ['walking', 'crawling', 'hopping', 'flying'];
+    console.log(
+      `${this.name} is ${
+        kind[Math.floor(Math.random() * kind.length)]
+      } in ${direction} direction`
+    );
   }
 }
 
@@ -74,6 +88,14 @@ class Fish extends Animal {
   thermoRegulation() {
     return this.#thermoReg;
   }
+  move(direction) {
+    let kind = [];
+    console.log(
+      `${this.name} is ${
+        kind[Math.floor(Math.random() * kind.length)]
+      } in ${direction} direction`
+    );
+  }
 }
 
 class Amphibia extends Animal {
@@ -99,6 +121,14 @@ class Amphibia extends Animal {
   }
   thermoRegulation() {
     return this.#thermoReg;
+  }
+  move(direction) {
+    let kind = ['swim'];
+    console.log(
+      `${this.name} is ${
+        kind[Math.floor(Math.random() * kind.length)]
+      } in ${direction} direction`
+    );
   }
 }
 
@@ -126,6 +156,14 @@ class Reptiles extends Animal {
   thermoRegulation() {
     return this.#thermoReg;
   }
+  move(direction) {
+    let kind = ['crawling', 'slithering', 'swiming'];
+    console.log(
+      `${this.name} is ${
+        kind[Math.floor(Math.random() * kind.length)]
+      } in ${direction} direction`
+    );
+  }
 }
 
 class Aves extends Animal {
@@ -152,6 +190,14 @@ class Aves extends Animal {
   thermoRegulation() {
     return this.#thermoReg;
   }
+  move(direction) {
+    let kind = ['flying', 'hopping', 'walking', 'swimming'];
+    console.log(
+      `${this.name} is ${
+        kind[Math.floor(Math.random() * kind.length)]
+      } in ${direction} direction`
+    );
+  }
 }
 
 class Mammals extends Animal {
@@ -177,6 +223,14 @@ class Mammals extends Animal {
   }
   thermoRegulation() {
     return this.#thermoReg;
+  }
+  move(direction) {
+    let kind = ['walking', 'running', 'hopping', 'swimming'];
+    console.log(
+      `${this.name} is ${
+        kind[Math.floor(Math.random() * kind.length)]
+      } in ${direction} direction`
+    );
   }
 }
 
