@@ -87,7 +87,7 @@ class Fish extends Animal {
     return this.#thermoReg;
   }
   move(direction) {
-    let kind = [];
+    let kind = ["swim"];
     console.log(
       `${this.name} is ${
         kind[Math.floor(Math.random() * kind.length)]
@@ -121,7 +121,7 @@ class Amphibia extends Animal {
     return this.#thermoReg;
   }
   move(direction) {
-    let kind = ["swim"];
+    let kind = ["Walk", "swim", "hop"];
     console.log(
       `${this.name} is ${
         kind[Math.floor(Math.random() * kind.length)]
